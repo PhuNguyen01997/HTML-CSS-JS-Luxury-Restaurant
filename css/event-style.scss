@@ -1,0 +1,258 @@
+$blue-text : #2c465a;
+$pink-primary : #fe4c8d;
+$yellow-primary: #fea100;
+$yellow-background-btn: #ffeac5;
+$yellow-text-btn: #d38a0c;
+$yellow-rate: #fff221;
+$blue-footer: #373844;
+$blue-facebook: #3b5998;
+$blue-twitter: #55acee;
+$red-gmail: #dd4b39;
+$grey-background: #ecf1f4;
+$grey-text-ipt: #4e555a;
+$grey-text-footer: #8e9198;
+$grey-text : #878d91;
+$grey-border: #e1e1e1;
+$white-bg: #edf1f3;
+
+
+// font-family: 'Sintony', sans-serif;
+@mixin formatText ($fontSize: 14rem, $fonrWeight: regular, $color: black){
+    font-size: $fontSize;
+    font-weight: $fonrWeight;
+    color: $color;
+}
+@mixin alignFlex ($direct: row, $horizonal: center, $vertical: center){
+    display: flex;
+    flex-direction: $direct;
+    align-items: $vertical;
+    justify-content: $horizonal;
+}
+@mixin positonCenter($pos: absolute, $top: 50%, $left: 50%){
+    position: $pos;
+    top: $top;
+    left: $left;
+    transform: translate(-$top, -$left);
+}
+
+
+.event{
+    &-wrap{
+        max-width: 117rem;
+        margin: 0 auto;
+        padding: 9rem 0;
+    }
+    &__item{
+        margin-bottom: 10rem;
+        @include alignFlex(row, flex-start, stretch);
+    }
+    &__date{
+        min-width: 9rem;
+        height: 10rem;
+        margin: 0 3rem 0 0;
+        @include alignFlex(column, center, center);
+        background-color: $yellow-primary;
+        font-family: 'Sintony', sans-serif;
+        @include formatText(1.5rem, regular, white);
+        box-shadow: 2px 2px 5px grey;
+        position: relative;
+        &:before{
+            content: "";
+            width: calc(100% - 1rem);
+            height: calc(100% - 1rem);
+            background-color: transparent;
+            border: 1px solid white;
+            @include positonCenter();
+        }
+        &-day{
+            @include formatText(3.2rem, bold, white);
+        }
+        &--month, &--year{
+            margin-top: 1rem;
+        }
+    }
+    &__img{
+        width: 57.9rem;
+        height: 34rem;
+    }
+    &__info{
+        padding: 0 0 0 5rem;
+        display: flex;
+        flex-direction: column;
+        &-title{
+            margin-top: 2rem;
+            @include formatText(3.5rem, bold, black);
+        }
+        &-time{
+            margin: 1.8rem 0 2.5rem;
+            @include formatText(2.2rem, bold, black);
+            @include alignFlex(row, flex-start, stretch);
+            .icon{
+                margin-right: 1rem;
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        &-desc{
+            flex-grow: 1;
+            @include formatText(1.4rem, regular, $grey-text);
+            font-family: 'Sintony', sans-serif;
+            line-height: 2rem;
+        }
+        &-button{
+            font-size: 1.4rem;
+            margin: 2rem 0 3rem;
+            width: 19rem;
+            height: 4.5rem;
+        }
+    }
+    &__pagi{
+        height: 4.5rem;
+        margin: 0 0 0 12rem;
+        @include alignFlex(row, flex-start, stretch);
+        @include formatText(1.4rem, bold, white);
+        position: relative;
+        &-item{
+            min-width: 8.5rem;
+            border-radius: 2rem;
+            &--number{
+                background-color: white;
+                border: 1px solid $grey-border;
+                color: black;
+                transition: 0.2s;
+                &:hover{
+                    background-color: $grey-border;
+                }
+            }
+            &:not(.event__pagi-item--number){
+                width: 11rem;
+            }
+            &:not(:first-child){
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+.time{
+    background-color: $grey-background;
+}
+
+// Menu ------------------------------------------------------------
+@media screen and (max-width: 1170px){
+    .event{
+        &-wrap{
+            padding: 5rem 0;
+        }
+        &__item{
+            margin-bottom: 5rem;
+        }
+        
+        &__img{
+            width: 50%;
+            height: auto;
+        }
+        &__info{
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .event{
+        &__item{
+            position: relative;
+            @include alignFlex(column, flex-start, center);
+        }
+        &__date{
+            margin: 0;
+            position: absolute;
+            top: 1rem;
+            left: calc(10% + 1rem);
+        }
+        &__img{
+            box-sizing: border-box;
+            width: 80%;
+        }
+        &__info{
+            width: 80%;
+            padding: 0;
+        }
+        &__pagi{
+            margin: 0 auto;
+            @include alignFlex(row, center, stretch);
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .event{
+        &__item{
+            
+            margin-bottom: 2rem;
+        }
+        &__info{
+            &-title{
+                font-size: 2.6rem;
+            }
+        }
+        &__pagi{
+            &-item{
+                min-width: 7rem;
+                border-radius: 2rem;
+                padding: 0 1.5rem;
+                &--number{
+                    background-color: white;
+                    border: 1px solid $grey-border;
+                    color: black;
+                    transition: 0.2s;
+                    &:hover{
+                        background-color: $grey-border;
+                    }
+                }
+                &:not(.event__pagi-item--number){
+                    width: auto;
+                }
+                &:not(:first-child){
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .event{
+        &__item{
+            padding: 0 0.5rem;
+        }
+        &__date{
+            padding: 1rem;
+            height: auto;
+            top: 1rem;
+            left: calc(0.5rem + 1rem);
+            min-width: min-content;
+        }
+        &__img{
+            width: 100%;
+        }
+        &__info{
+            width: 100%;
+        }
+        &__pagi{
+            width: 100%;
+            height: 8rem;
+            @include alignFlex(row, center, flex-start);
+            &-item{
+                height: 50%;
+                &:not(.event__pagi-item--number){
+                    width: 8rem;
+                    position: absolute;
+                    top: 4rem;
+                }
+                &:first-child{
+                    left: calc(50%);
+                }
+                &:last-child{
+                    left: calc(50% - 8rem);
+                }
+            }
+        }
+    }
+}

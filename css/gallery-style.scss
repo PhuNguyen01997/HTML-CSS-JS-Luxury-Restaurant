@@ -1,0 +1,184 @@
+$blue-text : #2c465a;
+$pink-primary : #fe4c8d;
+$yellow-primary: #fea100;
+$yellow-background-btn: #ffeac5;
+$yellow-text-btn: #d38a0c;
+$yellow-rate: #fff221;
+$blue-footer: #373844;
+$blue-facebook: #3b5998;
+$blue-twitter: #55acee;
+$red-gmail: #dd4b39;
+$grey-background: #ecf1f4;
+$grey-text-ipt: #4e555a;
+$grey-text-footer: #8e9198;
+$grey-text : #878d91;
+$grey-border: #e1e1e1;
+$white-bg: #edf1f3;
+
+
+// font-family: 'Sintony', sans-serif;
+@mixin formatText ($fontSize: 14rem, $fonrWeight: regular, $color: black){
+    font-size: $fontSize;
+    font-weight: $fonrWeight;
+    color: $color;
+}
+@mixin alignFlex ($direct: row, $horizonal: center, $vertical: center){
+    display: flex;
+    flex-direction: $direct;
+    align-items: $vertical;
+    justify-content: $horizonal;
+}
+@mixin positonCenter($pos: absolute, $top: 50%, $left: 50%){
+    position: $pos;
+    top: $top;
+    left: $left;
+    transform: translate(-$top, -$left);
+}
+
+.gallery{
+    position: relative;
+    &-wrap{
+        max-width: 117rem;
+        margin: 0 auto;
+        padding: 10rem 0;
+    }
+    &__title{
+        text-align: center;
+        @include formatText(3.5rem, bold, black);
+    }
+    &__nav{
+        @include alignFlex(row, center, center);
+        width: auto;
+        &-item{
+            height: 7rem;
+            margin: 3rem 0;
+            padding: 0 2rem;
+            @include alignFlex(column, center, center);
+            background-color: white;
+            cursor: pointer;
+            &:first-child{
+                border-radius: 1rem;
+            }
+        }
+        &-item:hover{
+            .gallery__nav-icon, .gallery__nav-text{
+                color: $pink-primary;
+                transform: scale(1.2);
+            }
+        }
+        &-item:not(:first-child){
+            border-left: 1px solid $grey-text;
+        }
+        &-icon{
+            width: 3rem;
+            height: 3rem;
+            transition: 0.5s;
+        }
+        &-text{
+            @include formatText(1.8rem, bold, black);
+            margin-top: 1rem;
+            transition: 0.2s;
+        }
+    }
+    &__grid{
+        &-container{
+            display: grid;
+            grid-gap: 3rem;
+            grid-template-columns: 37rem 7rem 17rem 7rem 37rem;
+            grid-template-rows: 20.8rem 20.8rem 36.8rem 20.8rem 20.8rem;
+            grid-template-areas:    'number-1 number-1 number-2 number-2 number-3'
+                                    'number-1 number-1 number-2 number-2 number-4'
+                                    'number-5 number-5 number-5 number-5 number-6'
+                                    'number-7 number-9 number-9 number-10 number-10'
+                                    'number-8 number-9 number-9 number-10 number-10'
+        }
+        @for $i from 1 through 10 {
+            &-item--#{$i}{
+                grid-area: number-#{$i};
+            }
+        }
+        &-item{
+            overflow: hidden;
+        }
+        &-image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__left-img{
+        width: 42rem;
+        height: 30rem;
+        position: absolute;
+        top: 7rem;
+        left: 7rem;
+        z-index: -1;
+    }
+}
+.time{
+    background-color: $grey-background;
+}
+
+// Gallery -----------------------------------------------------------
+@media screen and (max-width: 1170px){
+    .gallery{
+        &__grid{
+            &-container{
+                position: relative;
+                grid-column: 12;
+                grid-row: 5;
+                grid-template-columns: 4fr 1fr 2fr 1fr 4fr;
+                grid-template-rows: auto;
+                grid-template-areas:    'number-1 number-1 number-2 number-2 number-3'
+                                        'number-1 number-1 number-2 number-2 number-4'
+                                        'number-5 number-5 number-5 number-5 number-6'
+                                        'number-7 number-9 number-9 number-10 number-10'
+                                        'number-8 number-9 number-9 number-10 number-10'
+            }
+        }
+        &__left-img{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .gallery{
+        &__grid{
+            &-container{
+                grid-gap: 1rem;
+                grid-column: 8;
+                grid-row: 6;
+                grid-template-columns: 3fr 1fr 1fr 3fr;
+                grid-template-rows: auto;
+                grid-template-areas:    'number-1 number-1 number-1 number-2'
+                                        'number-3 number-3 number-4 number-4'
+                                        'number-5 number-5 number-5 number-5'
+                                        'number-6 number-6 number-6 number-6'
+                                        'number-7 number-7 number-8 number-8'
+                                        'number-9 number-10 number-10 number-10'
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .gallery{
+        &-wrap{
+            padding: 5rem 0 0;
+        }
+        &__nav{
+            &-item{
+                padding: 0 1rem;
+            }
+        }
+        &__grid{
+            &-container{
+                grid-gap: 1rem;
+                grid-column: 1;
+                grid-row: auto;
+                grid-template-columns: auto;
+                grid-template-areas: 'number-1' 'number-2' 'number-3' 'number-4' 'number-5' 'number-6' 'number-7' 'number-8' 'number-9' 'number-10';
+                grid-template-rows: auto;
+            }
+        }
+    }
+}

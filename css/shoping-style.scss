@@ -1,0 +1,366 @@
+$blue-text : #2c465a;
+$pink-primary : #fe4c8d;
+$yellow-primary: #fea100;
+$yellow-background-btn: #ffeac5;
+$yellow-text-btn: #d38a0c;
+$yellow-rate: #fff221;
+$blue-footer: #373844;
+$blue-facebook: #3b5998;
+$blue-twitter: #55acee;
+$red-gmail: #dd4b39;
+$grey-background: #ecf1f4;
+$grey-text-ipt: #4e555a;
+$grey-text-footer: #8e9198;
+$grey-text : #878d91;
+$grey-border: #e1e1e1;
+$white-bg: #edf1f3;
+
+
+// font-family: 'Sintony', sans-serif;
+@mixin formatText ($fontSize: 14rem, $fonrWeight: regular, $color: black){
+    font-size: $fontSize;
+    font-weight: $fonrWeight;
+    color: $color;
+}
+@mixin alignFlex ($direct: row, $horizonal: center, $vertical: center){
+    display: flex;
+    flex-direction: $direct;
+    align-items: $vertical;
+    justify-content: $horizonal;
+}
+@mixin positonCenter($pos: absolute, $top: 50%, $left: 50%){
+    position: $pos;
+    top: $top;
+    left: $left;
+    transform: translate(-$top, -$left);
+}
+
+
+.cart{
+    &-wrap{
+        max-width: 117rem;
+        margin: 0 auto;
+        padding: 10rem 0;
+    }
+    &__title{
+        margin-bottom: 3rem;
+        @include formatText(3.5rem, bold, black);
+    }
+    &__content{
+        display: flex;
+        align-items: flex-start;
+    }
+    &__table{
+        font-family: 'Sintony', sans-serif;
+        flex-grow: 1;
+        
+        &-title{
+            @include formatText(2.1rem, bold, black);
+            th{
+                padding-bottom: 1.5rem;
+            }
+            th:first-child{
+                text-align: left;
+            }
+        }
+        &-info{
+            border-top: 1px solid $grey-border;
+            @include formatText(1.3rem, bold, black);
+            td{
+                // border-collapse:collapse; 
+                padding: 2rem 0;
+                text-align: center;
+                vertical-align: middle;
+            }
+            &:last-child{
+                border-bottom: 1px solid $grey-border;
+            }
+        }
+        &-name{
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 3rem;
+                width: 11.5rem;
+                height: 11.5rem;
+            }
+        }
+        &-qty{
+            input{
+                width: 6rem;
+                height: 3.5rem;
+                box-sizing: border-box;
+                border: 1px solid $grey-border;
+                text-align: center;
+                font-size: inherit;
+                color: inherit;
+                font-weight: inherit;
+            }
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+            /* Firefox */
+            input[type=number] {
+            -moz-appearance: textfield;
+            }
+        }
+        &-delete{
+            button{
+                background-color: red;
+                color: white;
+                border: none;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                font-weight: bolder;
+                transition: 0.2s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    &__summary{
+        width: 27rem;
+        margin-left: 3rem;
+        padding: 1rem;
+        background-color: $pink-primary;
+        &-detail{
+            padding: 3rem;
+            border: 1px solid white;
+            border-style: dashed;
+        }
+        &-sum{
+            padding: 1.5rem 3rem 7.5rem;
+            font-family: 'Sintony', sans-serif;
+            border: 1px solid white;
+            border-style: dashed;
+        }
+        &-title{
+            &--detail{
+                padding-bottom: 1rem;
+                @include formatText(2.2rem, bold, white);
+            }
+            &--sum{
+                padding-bottom: 4rem;
+                @include formatText(1.5rem, bold, white);
+                display: flex;
+                span:last-child{
+                    width: 5.5rem;
+                    margin-left: auto;
+                }
+            }
+        }
+        &-row{
+            padding-top: 1rem;
+            font-family: 'Sintony', sans-serif;
+            @include formatText(1.5rem, regular, white);
+            display: flex;
+            span:last-child{
+                width: 5.5rem;
+                margin-left: auto;
+            }
+        }
+        &-checkout{
+            width: 100%;
+            padding: 2rem 1rem;
+        }
+    }
+}
+.related{
+    background-color: $grey-background;
+    &-wrap{
+        max-width: 117rem;
+        margin: 0 auto;
+        padding: 10rem 0;
+    }
+    &__title{
+        @include formatText(3.5rem, bold, black);
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+    }
+    &__item{
+        font-family: 'Sintony', sans-serif;
+        max-width: 27rem;
+        margin: 4rem auto 0;
+        padding: 3.5rem 2.5rem 5rem;
+        box-sizing: border-box;
+        background: white;
+        position: relative;
+        @include alignFlex(column, space-between, center);
+        &-rate{
+            width: 4rem;
+            height: 2.5rem;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            background-color: $yellow-primary;
+            @include formatText(1.4rem, bold, white);
+            @include alignFlex(row, space-around, center);
+        }
+        &-img{
+            width: 100%;
+            height: auto;
+            img{
+                width: 100%;
+                // height: 100%;
+                height: 22.5rem;
+                object-fit: cover;
+            }
+        }
+        &-name{
+            margin: 4rem 0 1rem;
+            text-align: center;
+            @include formatText(1.7rem, bold, black);
+        }
+        &-price{
+            text-align: center;
+            @include formatText(1.6rem, bold, black);
+            .original{
+                text-decoration: line-through;
+                font-weight: normal;
+                color: $grey-text;
+            }
+        }
+        &-add{
+            $radianButton: 4.5rem;
+            width: $radianButton;
+            height: $radianButton;
+            position: absolute;
+            bottom: -2.25rem;
+            left: calc(50% - 2.25rem);
+            border-radius: 50%;
+            font-size: 3rem;
+        }
+    }
+}
+
+// Cart ------------------------------------------------------------
+@media screen and (max-width: 1170px){
+    .cart{
+        &-wrap{
+            padding: 10rem 1rem;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .cart{
+        &__table{
+            &-name{
+                img{
+                    width: 8rem;
+                    height: 8rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+        &__summary{
+            margin-left: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 786px){
+    .cart{
+        &-wrap{
+            padding: 3rem 1rem;
+        }
+        &__content{
+            flex-direction: column;
+            align-items: stretch;
+        }
+        &__summary{
+            margin-left: 0;
+            margin: 2rem auto 0;
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .cart{
+        &-wrap{
+            padding: 3rem 0;
+        }
+        &__summary{
+            margin-left: 0;
+            margin: 2rem auto 0;
+        }
+        &__table{
+            &-title{
+                th{
+                    font-size: 1.6rem;
+                }
+            }
+            &-name{
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+            &-qty{
+                input{
+                    width: 4rem;
+                }
+            }
+            // &-delete{
+            //     button{
+            //         background-color: red;
+            //         color: white;
+            //         border: none;
+            //         width: 3rem;
+            //         height: 3rem;
+            //         border-radius: 50%;
+            //         font-weight: bolder;
+            //         transition: 0.2s;
+            //         &:hover{
+            //             transform: scale(1.2);
+            //         }
+            //     }
+            // }
+        }
+    }
+}
+// Related Foods ------------------------------------------------------
+@media screen and (max-width: 1170px){
+    .related{
+        &__item{
+            padding: 3.5rem 1rem 4rem;
+            max-width: max-content;
+            width: 25%;
+            &-img{
+                width: 100%;
+                height: auto;
+                img{
+                    height: 16rem;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .related{
+        &-wrap{
+            padding: 3rem 0;
+        }
+        &__list{
+            flex-wrap: wrap;
+        }
+        
+        &__item{
+            max-width: 27rem;
+            width: auto;
+            &-img{
+                width: calc(27rem - 2rem);
+                img{
+                    width: 100%;
+                    height: 16rem;
+                }
+            }
+        }
+    }
+}

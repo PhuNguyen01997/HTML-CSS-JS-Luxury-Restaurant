@@ -1,0 +1,68 @@
+.aboutPri-wrap {
+  max-width: 97rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+}
+
+.aboutPri__title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.aboutPri__text {
+  margin: 4rem 0 6rem;
+  padding: 0 13rem;
+  text-align: center;
+  line-height: 2rem;
+  font-family: 'Sintony', sans-serif;
+  font-size: 1.4rem;
+  font-weight: regular;
+  color: #878d91;
+}
+
+.aboutPri__video-link {
+  height: 44.6rem;
+}
+
+.aboutPri__video-link iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.aboutPri__video-span {
+  padding: 2rem 0;
+  font-family: 'Sintony', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: black;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.introduce {
+  background-color: white;
+}
+
+.time {
+  background-color: #ecf1f4;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutPri-wrap {
+    padding: 5rem 0 0rem;
+  }
+  .aboutPri__text {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aboutPri__text {
+    padding: 0 1rem;
+  }
+  .aboutPri__video-link {
+    height: 22rem;
+  }
+}
+/*# sourceMappingURL=about-style.css.map */

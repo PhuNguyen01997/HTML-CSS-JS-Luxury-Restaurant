@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Favicon-->
+  <link rel="shortcut icon" type="image/png" href=""/>
+  
+  <!--Jquery CDN-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  
+  <!--Bootstrap 4 CDN-->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+  
+  <!--Font Answer Icon 5-->
+  <script src="https://kit.fontawesome.com/5ca78cb473.js" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!--FontFamily CDN-->
+  <link href="https://fonts.googleapis.com/css2?family=Sintony&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- Animated.css library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!--Owl Carousel-->
+  <script src="./owl-carousel-v2/owl.carousel.min.js"></script>
+  <link href="/owl-carousel-v2/owl.carousel.min.css" rel="stylesheet">
+  <link href="/owl-carousel-v2/owl.theme.default.min.css" rel="stylesheet">
+
+  <title>Restaurant</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-wrap">
+      <img class="nav__logo" src="./img/etc/logo.jpg" alt="">
+      <ul class="nav-list nav-list--text">
+        <a href="home.html" class="nav-list__item nav-list__item--text">HOME</a>
+        <a href="menu.html" class="nav-list__item nav-list__item--text">MENU</a>
+        <a href="event.html" class="nav-list__item nav-list__item--text">EVENT</a>
+        <a href="gallery.html" class="nav-list__item nav-list__item--text">GALLERY</a>
+        <a href="about.html" class="nav-list__item nav-list__item--text">ABOUT US</a>
+        <a href="contact.html" class="nav-list__item nav-list__item--text">CONTACT</a>
+      </ul>
+      <button class="nav-dropdown">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-list nav-list--button">
+        <li class="nav-list__item nav-list__item--cart">
+          <i id="icon-cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i id="icon-down" class="fa fa-caret-down" aria-hidden="true"></i>
+          <span id="icon-badges">3</span>
+        </li>
+        <li class="nav-list__item nav-list__item--btn">
+          <button class="btn"><img src="./img/etc/icon_plate.png"> BOOK YOUR TABLE</button>
+        </li>
+      </ul>
+      <ul class="nav__cart">
+        <li class="nav__cart-item">
+          <img class="nav__cart-img" src="./img/cart-ex-1.jpg" alt="">
+          <p class="nav__cart-name">Tà hủ trên đậu xanh</p>
+          <p class="nav__cart-price">$5.00</p>
+          <button class="nav__cart-delete">X</button>
+        </li>
+        <li class="nav__cart-item">
+          <img class="nav__cart-img" src="./img/cart-ex-2.jpg" alt="">
+          <p class="nav__cart-name">Thịt bò quất tôm hùm</p>
+          <p class="nav__cart-price">$12.00</p>
+          <button class="nav__cart-delete">X</button>
+        </li>
+        <li class="nav__cart-item">
+          <img class="nav__cart-img" src="./img/cart-ex-3.jpg" alt="">
+          <p class="nav__cart-name">Double càng cua khổng lồ</p>
+          <p class="nav__cart-price">$3.00</p>
+          <button class="nav__cart-delete">X</button>
+        </li>
+        <button class="btn nav__cart-order">Order</button>
+      </ul>
+    </div>
+  </div>
+  <div class="header">
+    <div class="header__text">
+      <h1 class="header__text-h1 header__text-h1--top">Teast your fav dish</h1>
+      <h1 class="header__text-h1 header__text-h1--bottom">from <span>luxury restaurent.</span></h1>
+    </div>
+    <img class="header__flag" src="./img/etc/logo-flag.png" alt="header-flag"></img>
+    <div class="header__carousel">
+      <img class="header__carousel-item" src="img/banner-img-1.jpg" alt="header">
+      <img class="header__carousel-item" src="img/banner-img-2.jpg" alt="header">
+      <img class="header__carousel-item" src="img/banner-img-3.jpeg" alt="header">
+    </div>
+  </div>
+  <div class="contact">
+    <div class="contact-wrap">
+      <div class="contact-child">
+        <img class="contact-child__item contact-child__item--icon" src="./img/etc/icon-message.svg" />
+        <div class="contact-child__item contact-child__item--text">
+          <p>READ</p>
+          <p>REVIEWS</p>
+        </div>
+        <div class="contact-child__item contact-child__item--btn">
+          <button>></button>
+        </div>
+      </div>
+      <div class="contact-child">
+        <img class="contact-child__item contact-child__item--icon" src="./img/etc/icon-phone.svg" />
+        <div class="contact-child__item contact-child__item--text">
+          <p>CALL US NOW FOR</p>
+          <p>HOME DELIVERY</p>
+        </div>
+      </div>
+      <div class="contact-child">
+        <div class="contact-child__item contact-child__item--number">1-008 005 006</div>
+      </div>
+    </div>
+  </div>
+  <div class="about">
+    <div class="about-wrap">
+      <div class="about__left">
+        <h1 class="about__top">About Restaurent</h1>
+        <p class="about__middle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged... </p>
+        <div class="about__bottom">
+          <button class="btn">READ MORE</button>
+          <img src="./img/etc/logo-award.png" alt="img-about-read-more">
+        </div>
+      </div>
+      <div class="about__right">
+        <img src="./img/about-ex-1.jpg" alt="img-about-example" class="about__grid-item">
+        <img src="./img/about-ex-2.jpg" alt="img-about-example" class="about__grid-item about__grid-item--translate">
+        <img src="./img/about-ex-3.jpg" alt="img-about-example" class="about__grid-item">
+        <img src="./img/about-ex-4.jpg" alt="img-about-example" class="about__grid-item about__grid-item--translate">
+      </div>
+    </div>
+  </div>
+  <div class="special">
+    <div class="special__background"></div>
+    <div class="special-wrap">
+      <h2 class="special__header">Today Special</h2>
+      <div class="special__carousel">
+        <div class="special__item">
+          <img class="special__item-top" src="./img/img.jpg" alt="">
+          <div class="special__item-middle">
+            <h3>Food Name One</h3>
+            <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          </div>
+          <div class="special__item-bottom">
+            <div class="special__bottom-left">
+              <span>HOME</span>
+              <span>DELIVERY</span>
+            </div>
+            <p class="special__bottom-center">1-008 005 006</p>
+            <p class="special__bottom-right"><sup>$</sup>99.00</p>
+          </div>
+        </div>
+        <div class="special__item">
+          <img class="special__item-top" src="./img/img.jpg" alt="">
+          <div class="special__item-middle">
+            <h3>Food Name Two</h3>
+            <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          </div>
+          <div class="special__item-bottom">
+            <div class="special__bottom-left">
+              <span>HOME</span>
+              <span>DELIVERY</span>
+            </div>
+            <p class="special__bottom-center">1-008 005 006</p>
+            <p class="special__bottom-right"><sup>$</sup>99.00</p>
+          </div>
+        </div>
+        <div class="special__item">
+          <img class="special__item-top" src="./img/img.jpg" alt="">
+          <div class="special__item-middle">
+            <h3>Food Name One</h3>
+            <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          </div>
+          <div class="special__item-bottom">
+            <div class="special__bottom-left">
+              <span>HOME</span>
+              <span>DELIVERY</span>
+            </div>
+            <p class="special__bottom-center">1-008 005 006</p>
+            <p class="special__bottom-right"><sup>$</sup>99.00</p>
+          </div>
+        </div>
+        <div class="special__item">
+          <img class="special__item-top" src="./img/img.jpg" alt="">
+          <div class="special__item-middle">
+            <h3>Food Name One</h3>
+            <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          </div>
+          <div class="special__item-bottom">
+            <div class="special__bottom-left">
+              <span>HOME</span>
+              <span>DELIVERY</span>
+            </div>
+            <p class="special__bottom-center">1-008 005 006</p>
+            <p class="special__bottom-right"><sup>$</sup>99.00</p>
+          </div>
+        </div>
+        <div class="special__item">
+          <img class="special__item-top" src="./img/img.jpg" alt="">
+          <div class="special__item-middle">
+            <h3>Food Name One</h3>
+            <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          </div>
+          <div class="special__item-bottom">
+            <div class="special__bottom-left">
+              <span>HOME</span>
+              <span>DELIVERY</span>
+            </div>
+            <p class="special__bottom-center">1-008 005 006</p>
+            <p class="special__bottom-right"><sup>$</sup>99.00</p>
+          </div>
+        </div>
+        <div class="special__item">
+          <img class="special__item-top" src="./img/img.jpg" alt="">
+          <div class="special__item-middle">
+            <h3>Food Name One</h3>
+            <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          </div>
+          <div class="special__item-bottom">
+            <div class="special__bottom-left">
+              <span>HOME</span>
+              <span>DELIVERY</span>
+            </div>
+            <p class="special__bottom-center">1-008 005 006</p>
+            <p class="special__bottom-right"><sup>$</sup>99.00</p>
+          </div>
+        </div>
+      </div>
+      <img class="special__corner scroll-load scroll-load--right" src="./img/special-ex.png" alt="pizza in corner">
+    </div>
+  </div>
+  <div class="menu">
+    <h2 class="menu__title">Food Menu</h2>
+    <div class="menu__dropdown">
+      <li class="menu__nav-item menu__nav-item--dropdown-li">
+        <img class="menu__nav-icon" src="./img/etc/icon-all.svg" alt="img-nav-icon">
+        <h3 class="menu__nav-text">Breakfast</h3>
+      </li>
+      <button class="menu__nav-item menu__nav-item--dropdown-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <ul class="hide menu__nav">
+      <li class="menu__nav-item">
+        <img class="menu__nav-icon" src="./img/etc/icon-all.svg" alt="img-nav-icon">
+        <h3 class="menu__nav-text">All</h3>
+      </li>
+      <li class="menu__nav-item">
+        <img class="menu__nav-icon" src="./img/etc/icon-breakfast.svg" alt="img-nav-icon">
+        <h3 class="menu__nav-text">Breakfast</h3>
+      </li>
+      <li class="menu__nav-item">
+        <img class="menu__nav-icon" src="./img/etc/icon-lunch.svg" alt="img-nav-icon">
+        <h3 class="menu__nav-text">Lunch</h3>
+      </li>
+      <li class="menu__nav-item">
+        <img class="menu__nav-icon" src="./img/etc/icon-snacks.svg" alt="img-nav-icon">
+        <h3 class="menu__nav-text">Snacks</h3>
+      </li>
+      <li class="menu__nav-item">
+        <img class="menu__nav-icon" src="./img/etc/icon-pizza.svg" alt="img-nav-icon">
+        <h3 class="menu__nav-text">Pizza</h3>
+      </li>
+      <li class="menu__nav-item">
+        <img class="menu__nav-icon" src="./img/etc/icon-soups.svg" alt="img-nav-icon">
+        <h3 class="menu__nav-text">Soups</h3>
+      </li>
+      <li class="menu__nav-item">
+        <img class="menu__nav-icon" src="./img/etc/icon-dinner.svg" alt="img-nav-icon">
+        <h3 class="menu__nav-text">Dinner</h3>
+      </li>
+    </ul>
+    <div class="menu-wrap">
+      <div class="menu__grid">
+        <div class="menu__item">
+          <div class="menu__item-left">
+            <p id="food-name">1 Ultimate organic fruit salad</p>
+            <p id="food-desc">survived not only five</p>
+          </div>
+          <div class="menu__item-right">
+            <p><sup>$</sup>39.00</p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-left">
+            <p id="food-name">2 Ultimate organic fruit salad</p>
+            <p id="food-desc">survived not only five</p>
+          </div>
+          <div class="menu__item-right">
+            <p><sup>$</sup>39.00</p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-left">
+            <p id="food-name">3 Ultimate organic fruit salad</p>
+            <p id="food-desc">survived not only five centuries but the leap</p>
+          </div>
+          <div class="menu__item-right">
+            <p><sup>$</sup>39.00</p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-left">
+            <p id="food-name">4 Ultimate organic fruit salad</p>
+            <p id="food-desc">survived not only five centuries but the leap</p>
+          </div>
+          <div class="menu__item-right">
+            <p><sup>$</sup>39.00</p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-left">
+            <p id="food-name">5 Ultimate organic fruit salad</p>
+            <p id="food-desc">survived not only five centuries but the leap</p>
+          </div>
+          <div class="menu__item-right">
+            <p><sup>$</sup>39.00</p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-left">
+            <p id="food-name">6 Ultimate organic fruit salad</p>
+            <p id="food-desc">survived not only five centuries but the leap</p>
+          </div>
+          <div class="menu__item-right">
+            <p><sup>$</sup>39.00</p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-left">
+            <p id="food-name">7 Ultimate organic fruit salad</p>
+            <p id="food-desc">survived not only five centuries but the leap</p>
+          </div>
+          <div class="menu__item-right">
+            <p><sup>$</sup>39.00</p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-left">
+            <p id="food-name">8 Ultimate organic fruit salad</p>
+            <p id="food-desc">survived not only five centuries but the leap</p>
+          </div>
+          <div class="menu__item-right">
+            <p><sup>$</sup>39.00</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn menu__button">EXPLORE FOOD MENU</button>
+      <img class="menu__img-right scroll-load scroll-load--right" src="img/menu-ex-2.png" alt="img-in-right">
+    </div>
+    <img class="menu__img-left scroll-load scroll-load--left" src="img/menu-ex-1.png" alt="img-in-left">
+  </div>
+  <div class="feedbacks">
+    <div class="feedbacks-wrap feedbacks__carousel">
+      <div class="feedbacks__carousel-item">
+        <h2 class="feedbacks__title">Happy Clients</h2>
+        <p class="feedbacks__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. </p>
+        <img src="./img/img.jpg" alt="avatar" class="feedbacks__avatar">
+        <p class="feedbacks__name">Dr. Prabakaran John</p>
+        <ul class="feedbacks__rate-container">
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate"><i class="fa fa-star" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+      <div class="feedbacks__carousel-item">
+        <h2 class="feedbacks__title">Happy Clients</h2>
+        <p class="feedbacks__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. </p>
+        <img src="./img/img.jpg" alt="avatar" class="feedbacks__avatar">
+        <p class="feedbacks__name">Dr. Prabakaran John</p>
+        <ul class="feedbacks__rate-container">
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate"><i class="fa fa-star" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+      <div class="feedbacks__carousel-item">
+        <h2 class="feedbacks__title">Happy Clients</h2>
+        <p class="feedbacks__text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. </p>
+        <img src="./img/img.jpg" alt="avatar" class="feedbacks__avatar">
+        <p class="feedbacks__name">Dr. Prabakaran John</p>
+        <ul class="feedbacks__rate-container">
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+          <li class="feedbacks__rate feedbacks__rate--active"><i class="fa fa-star" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="reserve">
+    <h2 class="reserve__title">Reserve your table</h2>
+    <div class="reserve-wrap reserve__flex-container">
+      <img class="reserve__img" src="./img/reserve-ex.jpg" alt="reserve-image-table">
+      <form class="reserve__form">
+        <div class="reserve__form-content">
+          <div class="reserve__form-item">
+            <div class="reserve__form-ipt">
+              <input type="text" name="name" placeholder="Name">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <p class="reserve__form-error">Error Info</p>
+          </div>
+          <div class="reserve__form-item">
+            <div class="reserve__form-ipt">
+              <input type="text" name="date" placeholder="Date">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+            </div>
+            <p class="reserve__form-error">Error Info</p>
+          </div>
+          <div class="reserve__form-item">
+            <div class="reserve__form-ipt">
+              <input type="text" name="time" placeholder="Time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+            </div>
+            <p class="reserve__form-error">Error Info</p>
+          </div>
+          <div class="reserve__form-item">
+            <div class="reserve__form-ipt">
+              <input type="text" name="email" placeholder="Email Address">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </div>
+            <p class="reserve__form-error">Error Info</p>
+          </div>
+          <div class="reserve__form-item">
+            <div class="reserve__form-ipt">
+              <input type="text" name="guests" placeholder="Guests">
+              <i class="fa fa-users" aria-hidden="true"></i>
+            </div>
+            <p class="reserve__form-error">Error Info</p>
+          </div>
+          <div class="reserve__form-item">
+            <div class="reserve__form-ipt">
+              <input type="text" name="phone" placeholder="Phone Number">
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+            </div>
+            <p class="reserve__form-error">Error Info</p>
+          </div>
+        </div>
+        <div class="reserve__form-footer">
+          <button class="btn reserve__form-btn">MAKE RESERVATION</button>
+          <div class="reserve__form-call">
+            <span>YOU CAN ALSO CALL</span>
+            <span>FOR A RESERVATION</span>
+          </div>
+          <p class="reserve__form-number">1-007 000 005</p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-wrap">
+      <div class="footer__nav">
+        <h3 class="footer__title">Navigation</h3>
+        <div class="footer__nav-list">
+          <a href="#/" class="footer__nav-link" name="home">Home</a>
+          <a href="#/" class="footer__nav-link" name="manu">Menu</a>
+          <a href="#/" class="footer__nav-link" name="event">Event</a>
+          <a href="#/" class="footer__nav-link" name="gallery">Gallery</a>
+          <a href="#/" class="footer__nav-link" name="about">About us</a>
+          <a href="#/" class="footer__nav-link" name="contact">Contact us</a>
+          <a href="#/" class="footer__nav-link" name="blog">Blog</a>
+          <a href="#/" class="footer__nav-link" name="recipie">Recipie</a>
+        </div>
+      </div>
+      <div class="footer__new">
+        <h3 class="footer__title">News letter</h3>
+        <p class="footer__new-text">Enter your email address and subscribe daily newsletter</p>
+        <form class="footer__new-form">
+          <div class="footer__ipt">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <input type="text" name="daily-mail" placeholder="Email Address">
+          </div>
+          <button class="btn footer__btn">SUBCRIBE</button>
+        </form>
+        <ul class="footer__new-logo">
+          <li class="footer__logo-item footer__logo-item--facebook"><i class="fab fa-facebook-f"></i></li>
+          <li class="footer__logo-item footer__logo-item--twitter"><i class="fa fa-envelope-o"></i></li>
+          <li class="footer__logo-item footer__logo-item--google"><i class="fab fa-google-plus" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+      <div class="footer__app">
+        <h3 class="footer__title">Our app available</h3>
+        <div class="footer__app-list">
+          <img src="./img/etc/logo-apple.png" alt="logo-apple-store" class="footer__app-item">
+          <img src="./img/etc/logo-chplay.png" alt="logo-google-play" class="footer__app-item">
+        </div>
+      </div>
+      <div class="footer__end">
+        <p>2016&#169; <span style="color: white; font-size: 1.3rem;">LUXURY RESTAURANT</span>, ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-reserve">
+    <div class="modal-reserve__content">
+      <h3>Thank you for book a table from us</h3>
+      <p>We will call you soon for confirm</p>
+      <button class="modal-reserve__close">X</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <h3>HELLO</h3>
+    <button class="btn modal-footer__close">X</button>
+  </div>
+
+  <script src="./js/my-responsive-script.js"></script>
+  <script src="./js/my-effect-load-script.js"></script>
+  <script src="./js/my-reserve-script.js"></script>
+  <script src="./js/my-footer-script.js"></script>
+  <script src="./js/my-owl-carousel.js"></script>
+</body>
+</html>

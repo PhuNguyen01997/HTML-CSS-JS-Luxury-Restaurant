@@ -1,0 +1,185 @@
+$blue-text : #2c465a;
+$pink-primary : #fe4c8d;
+$yellow-primary: #fea100;
+$yellow-background-btn: #ffeac5;
+$yellow-text-btn: #d38a0c;
+$yellow-rate: #fff221;
+$blue-footer: #373844;
+$blue-facebook: #3b5998;
+$blue-twitter: #55acee;
+$red-gmail: #dd4b39;
+$grey-background: #ecf1f4;
+$grey-text-ipt: #4e555a;
+$grey-text-footer: #8e9198;
+$grey-text : #878d91;
+$grey-border: #e1e1e1;
+$white-bg: #edf1f3;
+
+
+// font-family: 'Sintony', sans-serif;
+@mixin formatText ($fontSize: 14rem, $fonrWeight: regular, $color: black){
+    font-size: $fontSize;
+    font-weight: $fonrWeight;
+    color: $color;
+}
+@mixin alignFlex ($direct: row, $horizonal: center, $vertical: center){
+    display: flex;
+    flex-direction: $direct;
+    align-items: $vertical;
+    justify-content: $horizonal;
+}
+@mixin positonCenter($pos: absolute, $top: 50%, $left: 50%){
+    position: $pos;
+    top: $top;
+    left: $left;
+    transform: translate(-$top, -$left);
+}
+
+
+.contactPri{
+    position: relative;
+    &__map{
+        width: 100%;
+        height: 65rem;
+    }
+    &__background{
+        width: 100%;
+        height: 51rem;
+    }
+    &-wrap{
+        width: 117rem;
+        margin: 0 auto 0;
+        position: absolute;
+        bottom: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        box-shadow: 0 25px 80px -19px grey;
+        z-index: 2;
+    }
+    &__item{
+        width: 50%;
+        padding: 9rem 10rem 7rem;
+        box-sizing: border-box;
+        &--form{
+            background-color: white;
+        }
+        &--info{
+            color: white;
+            background-color: $pink-primary;
+        }
+    }
+    &__title{
+        margin-bottom: 4rem;
+        @include formatText(3.5rem, bold);
+        &--black{
+            color: black;
+        }
+        &--white{
+            color: white;
+        }
+    }
+    &__input{
+        font-family: 'Sintony', sans-serif;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 0;
+        @include alignFlex(row, flex-start, center);
+        border-bottom: 1px solid $grey-border;
+        &-icon{
+            margin-right: 2rem;
+            width: 2.5rem;
+            font-size: 2rem;
+            transition: 0.5s;
+        }
+        &-ipt{
+            @include formatText(1.4rem, regular, $grey-text-ipt);
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            &--textarea{
+                font-family: inherit;
+                resize: none;
+                height: 13rem;
+            }
+        }
+        &--textarea{
+            align-items: flex-start;
+        }
+    }
+    &__submit{
+        margin-top: 3rem;
+        width: 17rem;
+        height: 5rem;
+        @include formatText(1.4rem, bold, white);
+    }
+    &__info{
+        &-span{
+            font-family: 'Sintony', sans-serif;
+            font-size: 1.4rem;
+        }
+        &-span:last-of-type{
+            margin-bottom: 1rem;
+        }
+        &-value{
+            margin: 0.5rem 0 3.5rem;
+            font-size: 2.3rem;
+            &--address, &--phone{
+                font-family: 'Sintony', sans-serif;
+            }
+            &--email{
+                display: inline-block;
+                margin: 0.5rem 0 3.5rem;
+                color: inherit;
+                text-decoration: none;
+            }
+            &--email:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// ContactPri ------------------------------------------------------------
+@media screen and (max-width: 1170px){
+    .contactPri{
+        &__background{
+            display: none;
+        }
+        &-wrap{
+            width: 100%;
+            position: static;
+            transform: none;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .contactPri{
+        &__item{
+            padding: 4rem 7rem;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .contactPri{
+        &-wrap{
+            @include alignFlex(column, flex-start, stretch);
+        }
+        &__item{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .contactPri{
+        &__map{
+            width: 100%;
+            height: 30rem;
+        }
+        &-wrap{
+            @include alignFlex(column, flex-start, stretch);
+        }
+        &__item{
+            padding: 4rem 2rem;
+        }
+    }
+}

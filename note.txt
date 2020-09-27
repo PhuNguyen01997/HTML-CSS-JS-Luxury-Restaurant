@@ -1,0 +1,11 @@
+$orange-primary : #fea100;
+$blue-text : #2c465a;
+$pink-primary : #fe4c8d;
+$yellow-primary: #fea100;
+$yellow-rate: #fff221;
+#blue-facebook: #3b5998;
+#blue-twitter: #55acee;
+#red-gmail: #dd4b39;
+#grey-ipt-text: #4e555a;
+#grey-text : #878d91;
+$white-bg: #edf1f3;
