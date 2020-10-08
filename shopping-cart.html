@@ -28,13 +28,13 @@
   <link href="/owl-carousel-v2/owl.carousel.min.css" rel="stylesheet">
   <link href="/owl-carousel-v2/owl.theme.default.min.css" rel="stylesheet"> -->
 
-  <title>Restaurant Contact</title>
+  <title>Restaurant</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./css/reset.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-  <link rel="stylesheet" type="text/css" href="./css/contact-style.css">
+  <link rel="stylesheet" type="text/css" href="./css/shoping-style.css">
 </head>
 <body>
   <div class="nav">
@@ -44,7 +44,7 @@
         <a href="home.html" class="nav-list__item nav-list__item--text">HOME</a>
         <a href="menu.html" class="nav-list__item nav-list__item--text">MENU</a>
         <a href="event.html" class="nav-list__item nav-list__item--text">EVENT</a>
-        <a href="gallery.html" class="nav-list__item nav-list__item--text">GALLERY</a>
+        <a href="gallery.html/" class="nav-list__item nav-list__item--text">GALLERY</a>
         <a href="about.html" class="nav-list__item nav-list__item--text">ABOUT US</a>
         <a href="contact.html" class="nav-list__item nav-list__item--text">CONTACT</a>
       </ul>
@@ -88,46 +88,153 @@
   </div>
   <div class="title">
     <div class="title__background"></div>
-    <h1 class="title__text">Contact Us</h1>
+    <h1 class="title__text">Shoping Cart</h1>
   </div>
-  <div class="contactPri">
-    <div class="contactPri__map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9320.722958105662!2d106.6673024286954!3d10.820397843438464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529111aa89f9d%3A0xd8f09cc0aa1b27f3!2zQ-G6o25nIGjDoG5nIGtow7RuZyBRdeG7kWMgdOG6vyBUw6JuIFPGoW4gTmjhuqV0!5e0!3m2!1svi!2s!4v1600858588670!5m2!1svi!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  <div class="cart">
+    <div class="cart-wrap">
+      <h2 class="cart__title">Product Cart</h2>
+      <div class="cart__content">
+        <table class="cart__table">
+          <thead>
+            <tr class="cart__table-title">
+              <th>Item</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cart__table-info">
+              <td class="cart__table-name">
+                <img src="./img/cart-ex-1.jpg" alt="item-img">
+                <h3>Tà hủ trên đậu xanh</h3>
+              </td>
+              <td class="cart__table-price">$100</td>
+              <td class="cart__table-qty">
+                <input type="number" value="2">
+              </td>
+              <td class="cart__table-subtotal">$100</td>
+              <td class="cart__table-delete">
+                <button>X</button>
+              </td>
+            </tr>
+            <tr class="cart__table-info">
+              <td class="cart__table-name">
+                <img src="./img/cart-ex-2.jpg" alt="item-img">
+                <h3>Thịt bò quất tôm hùm</h3>
+              </td>
+              <td class="cart__table-price">$10.00</td>
+              <td class="cart__table-qty">
+                <input type="number" value="2">
+              </td>
+              <td class="cart__table-subtotal">$10.00</td>
+              <td class="cart__table-delete">
+                <button>X</button>
+              </td>
+            </tr>
+            <tr class="cart__table-info">
+              <td class="cart__table-name">
+                <img src="./img/cart-ex-3.jpg" alt="item-img">
+                <h3>Double càng cua không lồ</h3>
+              </td>
+              <td class="cart__table-price">$100</td>
+              <td class="cart__table-qty">
+                <input type="number" value="2">
+              </td>
+              <td class="cart__table-subtotal">$100</td>
+              <td class="cart__table-delete">
+                <button>X</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="cart__summary">
+          <div class="cart__summary-detail">
+            <p class="cart__summary-title cart__summary-title--detail">Summary</p>
+            <p class="cart__summary-row">
+              <span>Subtotal</span>
+              <span>:$30.00</span>
+            </p>
+            <p class="cart__summary-row">
+              <span>Shipping cost</span>
+              <span>:$0</span>
+            </p>
+            <p class="cart__summary-row">
+              <span>Tax</span>
+              <span>:$10</span>
+            </p>
+          </div>
+          <div class="cart__summary-sum">
+            <p class="cart__summary-title cart__summary-title--sum">
+              <span>ORDER TOTAL</span>
+              <span>:$32.10</span>
+            </p>
+            <button class="btn cart__summary-checkout">GO TO CHECKOUT</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="contactPri__background"></div>
-    <div class="contactPri-wrap">
-      <form class="contactPri__item contactPri__item--form">
-        <h2 class="contactPri__title contactPri__title--black">Get in tounch</h2>
-        <div class="contactPri__input">
-          <i class="contactPri__input-icon far fa-user"></i>
-          <input type="text" class="contactPri__input-ipt" placeholder="Name">
+  </div>
+  <div class="related">
+    <div class="related-wrap">
+      <h2 class="related__title">Related Foods</h2>
+      <div class="related__list">
+        <div class="related__item">
+          <span class="related__item-rate">
+            5 <i class="fas fa-star"></i>
+          </span>
+          <div class="related__item-img">
+            <img src="./img/cart-ex-1.jpg" alt="related-food">
+          </div>
+          <h3 class="related__item-name">ADZUKI BEANS</h3>
+          <p class="related__item-price">
+            <span class="original">$120</span>
+            <span class="sale">$100</span>
+          </p>
+          <button class="btn related__item-add">+</button>
         </div>
-        <div class="contactPri__input">
-          <i class="contactPri__input-icon far fa-envelope"></i>
-          <input type="text" class="contactPri__input-ipt" placeholder="Email">
+        <div class="related__item">
+          <span class="related__item-rate">
+            5 <i class="fas fa-star"></i>
+          </span>
+          <div class="related__item-img">
+            <img src="./img/cart-ex-3.jpg" alt="related-food">
+          </div>
+          <h3 class="related__item-name">ADZUKI BEANS</h3>
+          <p class="related__item-price">
+            <span class="original">$120</span>
+            <span class="sale">$100</span>
+          </p>
+          <button class="btn related__item-add">+</button>
         </div>
-        <div class="contactPri__input contactPri__input--textarea">
-          <i class="contactPri__input-icon far fa-comments"></i>
-          <textarea  class="contactPri__input-ipt contactPri__input-ipt--textarea" placeholder="Message"></textarea>
+        <div class="related__item">
+          <span class="related__item-rate">
+            5 <i class="fas fa-star"></i>
+          </span>
+          <div class="related__item-img">
+            <img src="./img/cart-ex-1.jpg" alt="related-food">
+          </div>
+          <h3 class="related__item-name">ADZUKI BEANS AwA AwA AwA AwA AwA</h3>
+          <p class="related__item-price">
+            <span class="original">$120</span>
+            <span class="sale">$100</span>
+          </p>
+          <button class="btn related__item-add">+</button>
         </div>
-        <button class="btn contactPri__submit">SEND NOW</button>
-      </form>
-      <div class="contactPri__item contactPri__item--info">
-        <h2 class="contactPri__title contactPri__title--white">Our Address</h2>
-        <h4 class="contactPri__info-span">ADDRESS</h4>
-        <pre class="contactPri__info-value contactPri__info-value--address">Luxury Restaurent
-California Second Street
-2nd floor</pre>
-        <h4 class="contactPri__info-span">PHONE</h4>
-        <p class="contactPri__info-value contactPri__info-value--phone">+91 8559 5585 6559</p>
-        <h4 class="contactPri__info-span">EMAIL</h4>
-        <a href="#/" class="contactPri__info-value contactPri__info-value--email">info@luxuryrestaurent.com</a>
-        <h4 class="contactPri__info-span">FOOLOW US</h4>
-        <ul class="footer__new-logo">
-          <li class="footer__logo-item footer__logo-item--facebook"><i class="fab fa-facebook-f"></i></li>
-          <li class="footer__logo-item footer__logo-item--twitter"><i class="fa fa-envelope-o"></i></li>
-          <li class="footer__logo-item footer__logo-item--google"><i class="fab fa-google-plus" aria-hidden="true"></i></li>
-        </ul>
+        <div class="related__item">
+          <span class="related__item-rate">
+            5 <i class="fas fa-star"></i>
+          </span>
+          <div class="related__item-img">
+            <img src="./img/cart-ex-2.jpg" alt="related-food">
+          </div>
+          <h3 class="related__item-name">ADZUKI BEANS</h3>
+          <p class="related__item-price">
+            <span class="original">$120</span>
+            <span class="sale">$100</span>
+          </p>
+          <button class="btn related__item-add">+</button>
+        </div>
       </div>
     </div>
   </div>
@@ -174,13 +281,22 @@ California Second Street
       </div>
     </div>
   </div>
+  <div class="modal-reserve">
+    <div class="modal-reserve__content">
+      <h3>Thank you for book a table from us</h3>
+      <p>We will call you soon for confirm</p>
+      <button class="modal-reserve__close">X</button>
+    </div>
+  </div>
   <div class="modal-footer">
     <h3>HELLO</h3>
     <button class="btn modal-footer__close">X</button>
   </div>
 
-  <script src="./js/my-contactPri-script.js"></script>
   <script src="./js/my-responsive-script.js"></script>
+  <script src="./js/my-effect-load-script.js"></script>
+  <!-- <script src="./js/my-reserve-script.js"></script> -->
   <script src="./js/my-footer-script.js"></script>
+  <!-- <script src="./js/my-owl-carousel.js"></script> -->
 </body>
 </html>
